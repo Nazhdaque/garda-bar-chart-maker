@@ -1,0 +1,30 @@
+/* |||||||||| |||||||||| |||||||||| |||||||||| xl */
+@media (width <= 1400px) {
+	.chart:not(.alt) {
+		--chart-size: 120%;
+		--asp: 16 / 9;
+	}
+	.chart {
+		--col: 5;
+		--x: 2;
+	}
+
+	.xl-gaf-row {
+		grid-auto-flow: row;
+	}
+
+	.xl-bg-img-none {
+		background-image: none;
+	}
+
+	.xl-order-0 {
+		order: 0;
+	}
+}
+
+/* |||||||||| |||||||||| |||||||||| |||||||||| sm */
+@media (width <= 768px) {
+	.sm-d-none {
+		display: none;
+	}
+}

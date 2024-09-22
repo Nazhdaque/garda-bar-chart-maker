@@ -1,0 +1,21 @@
+.layout-body {
+	display: grid;
+}
+
+.layout-center {
+	display: grid;
+	grid-template-columns: 1fr minmax(min-content, var(--max-content-width)) 1fr;
+	padding-inline: max(1rem, 5vmin);
+
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.layout-center > * {
+	grid-column: 2;
+}
+
+.main-content {
+	scroll-behavior: smooth;
+	counter-reset: slide-counter 0;
+}

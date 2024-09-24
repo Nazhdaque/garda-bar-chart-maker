@@ -31,10 +31,11 @@
 	--chart-size: min(30rem, 150%);
 	--clr-solid: hsl(var(--clr-0c));
 	--clr-grid: #eeeeee;
+	--gap: min(4rem, 10dvw - 1rem);
 
 	display: grid;
 	grid-auto-flow: column;
-	gap: 4em;
+	gap: var(--gap);
 	place-items: center;
 	place-self: center;
 }
@@ -47,7 +48,7 @@
 .chart-legend {
 	display: grid;
 	row-gap: 0.4em;
-	margin-top: 2em;
+	margin-top: calc(var(--gap) / 2);
 }
 .chart-legend > * {
 	--marker-w: 2em;

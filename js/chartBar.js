@@ -255,10 +255,10 @@ const getChartData = async () => {
 				maintainAspectRatio: false,
 				layout: {
 					padding: {
-						top: toggleMode(50, 20, mode),
+						top: toggleMode(window.outerWidth <= mobile && 0, 25, mode),
 						left: toggleMode(50, 0, mode),
 						right: 50,
-						bottom: toggleMode(50, 0, mode),
+						bottom: toggleMode(window.outerWidth <= mobile && 0, 0, mode),
 					},
 				},
 			},

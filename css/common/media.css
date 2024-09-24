@@ -2,11 +2,11 @@
 @media (width <= 1400px) {
 	.chart:not(.alt) {
 		--chart-size: 120%;
-		--asp: 16 / 9;
 	}
 	.chart {
 		--col: 5;
 		--x: 2;
+		--asp: 16 / 9;
 	}
 
 	.xl-gaf-row {

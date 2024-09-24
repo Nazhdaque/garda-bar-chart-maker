@@ -6,7 +6,7 @@
 
 	--fs-3xl: min(5rem, 7dvw + 1rem);
 	--fs-2xl: min(3.25rem, 7dvw + 1rem);
-	--fs-xl: 2rem;
+	--fs-xl: min(2rem, 2dvw + 1rem);
 	--fs-lg: 1.5rem;
 	--fs-md: 1.25rem;
 	--fs-rg: 1rem;

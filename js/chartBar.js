@@ -57,12 +57,15 @@ const setChartTheme = chart => {
 	chart.update();
 };
 
-const getPairs = (items, values) => {
+const getPairs = (legends, values, total) => {
 	const pairs = {};
 
-	if (items)
-		for (const [i, key] of items.entries())
-			pairs[key] = (values[i][0] * 100) / values[i][1];
+	// if (items)
+	// 	for (const [i, key] of items.entries())
+	// 		pairs[key] = (values[i][0] * 100) / values[i][1];
+
+	if (legends)
+		legends.forEach((key, i) => (pairs[key] = (values[i] * 100) / total[i]));
 
 	return pairs;
 };
@@ -79,14 +82,14 @@ const sortDescending = json => {
 	const values = [];
 	const sortedJson = [];
 	json.forEach(dataset => {
-		const { title, values: vals, legends } = dataset;
+		const { title, values: vals, total, legends } = dataset;
 		const sortedDataset = {
 			title,
 			values: [],
 			legends: [],
 		};
 
-		for (const [legend, value] of sortPairs(getPairs(legends, vals))) {
+		for (const [legend, value] of sortPairs(getPairs(legends, vals, total))) {
 			sortedDataset.values.unshift(Number.parseInt(value, 10));
 			sortedDataset.legends.unshift(legend);
 		}
@@ -279,3 +282,15 @@ const getChartData = async () => {
 };
 
 getChartData();
+
+// [
+// 	[610, 1000],
+// 	[377, 1000],
+// 	[233, 1000],
+// 	[144, 1000],
+// 	[144, 1000],
+// 	[89, 1000],
+// 	[55, 1000],
+// 	[34, 1000],
+// 	[987, 1000]
+// ],

@@ -152,7 +152,7 @@ const chartData = (items, slides, index) => {
 	items.forEach((item, i) => {
 		const { value, color } = item.dataset;
 		legends.push(item.textContent);
-		values.push(value);
+		values.push(Number.parseFloat(value));
 		colors.splice(i, colors[i], color);
 		item.style.setProperty("--segment-color", color);
 	});

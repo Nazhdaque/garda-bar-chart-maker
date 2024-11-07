@@ -59,13 +59,15 @@ const setChartTheme = chart => {
 
 const getPairs = (legends, values, total) => {
 	const pairs = {};
+	const valSum = values.reduce((sum, num) => sum + num, 0);
 
 	// if (items)
 	// 	for (const [i, key] of items.entries())
 	// 		pairs[key] = (values[i][0] * 100) / values[i][1];
 
-	if (legends)
-		legends.forEach((key, i) => (pairs[key] = (values[i] * 100) / total[i]));
+	legends.forEach(
+		(key, i) => (pairs[key] = (values[i] * 100) / (total ? total[i] : valSum))
+	);
 
 	return pairs;
 };
@@ -90,7 +92,7 @@ const sortDescending = json => {
 		};
 
 		for (const [legend, value] of sortPairs(getPairs(legends, vals, total))) {
-			sortedDataset.values.unshift(Number.parseInt(value, 10));
+			sortedDataset.values.unshift(Math.round(value));
 			sortedDataset.legends.unshift(legend);
 		}
 
@@ -150,7 +152,7 @@ const chartData = (items, slides, index) => {
 	items.forEach((item, i) => {
 		const { value, color } = item.dataset;
 		legends.push(item.textContent);
-		values.push(Number.parseFloat(value, 10));
+		values.push(value);
 		colors.splice(i, colors[i], color);
 		item.style.setProperty("--segment-color", color);
 	});

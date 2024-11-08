@@ -92,7 +92,7 @@ const sortDescending = json => {
 		};
 
 		for (const [legend, value] of sortPairs(getPairs(legends, vals, total))) {
-			sortedDataset.values.unshift(Math.round(value));
+			sortedDataset.values.unshift(value.toFixed(0));
 			sortedDataset.legends.unshift(legend);
 		}
 

@@ -5,17 +5,20 @@ import { getNav } from "./getNav.js";
 import { slide, chartSection, li } from "./html.js";
 import { render } from "lit-html";
 
-let palette = [
-	"#0bbafa",
-	"#b657ff",
-	"#0081cc",
-	"#863dc6",
-	"#b7d8fe",
-	"#dfb5ff",
-	"#f9b232",
-	"#1cbab3",
-	"#a4897a",
-];
+let palette = getCustomPropsValues([
+	"--violet-500",
+	"--cyan-500",
+	"--cyan-800",
+	"--violet-100",
+	"--warm-500",
+	"--warm-100",
+	"--warm-400",
+	"--warm-800",
+	"--violet-800",
+	"--violet-300",
+	"--cyan-300",
+	"--warm-200",
+]);
 
 const mobile = 576;
 const altMode = [1];

@@ -1,7 +1,7 @@
 /* |||||||||| |||||||||| |||||||||| |||||||||| xl */
 @media (width <= 1400px) {
 	.chart:not(.alt) {
-		--chart-size: 120%;
+		--chart-size: 115%;
 	}
 	.chart {
 		--col: 5;

@@ -5,7 +5,7 @@ export const slide = () => html`
 		<div class="slide-number"></div>
 
 		<div class="slide__top-group">
-			<div class="slide-ttl z-up width-x">
+			<!-- <div class="slide-ttl z-up width-x">
 				<h1 class="fs-2xl fw-eb">
 					Средство автопостроения
 					<span class="txt-gradient">гистограмм</span>
@@ -15,7 +15,7 @@ export const slide = () => html`
 					<br />
 					Рекомендую Firefox, в нем есть удобный встроенный скриншотер.
 				</p>
-			</div>
+			</div> -->
 			<button class="brand-logo sm-d-none toggle" aria-label="toggle theme">
 				<img src="./images/logo-b.svg" alt="brand-logo" />
 			</button>

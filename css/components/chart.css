@@ -1,6 +1,6 @@
 [data-theme="black"] .chart {
-	--clr-solid: #bbbbbb;
-	--clr-grid: #555555;
+	--clr-solid: var(--sapphire-200);
+	--clr-grid: hsl(from var(--sapphire-200) h s l / 0.1);
 }
 
 .chart.alt {
@@ -29,8 +29,8 @@
 	--col: 3;
 	--x: 2;
 	--chart-size: min(30rem, 150%);
-	--clr-solid: hsl(var(--clr-0c));
-	--clr-grid: #eeeeee;
+	--clr-solid: var(--graphit-700);
+	--clr-grid: hsl(from var(--graphit-700) h s l / 0.1);
 	--gap: min(4rem, 10dvw - 1rem);
 
 	display: grid;

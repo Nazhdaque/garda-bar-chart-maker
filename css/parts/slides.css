@@ -14,9 +14,10 @@
 	background-size: 25dvw;
 	background-position: bottom 0 right 0;
 	row-gap: 4rem;
-	grid-auto-rows: min-content 1fr;
+	/* grid-auto-rows: min-content 1fr; */
+	grid-auto-rows: min-content;
 	align-items: start;
-	box-shadow: 0 0 4rem 1rem hsl(var(--clr-1b));
+	box-shadow: 0 0 4rem 1rem var(--cyan-500);
 }
 
 /* top right beam */
@@ -30,8 +31,8 @@
 	aspect-ratio: 1;
 	background-image: linear-gradient(
 		80deg,
-		hsl(var(--clr-1b)) 0,
-		hsl(var(--clr-1a)) 100%
+		var(--cyan-500) 0,
+		var(--violet-500) 100%
 	);
 	transition: clip-path 0.25s;
 	clip-path: polygon(100% 0, 0 70%, 100% 30%);
